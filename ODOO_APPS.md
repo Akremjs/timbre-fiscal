@@ -75,6 +75,23 @@ Odoo Apps ne peut lire un dépôt **privé** sans autorisation explicite.
 - [ ] `icon.png` et `index.html` s'affichent correctement dans Apps
 - [ ] Aucune URL ou auteur tiers (polyline.xyz, etc.)
 
+## Message « You bought this module and need support? »
+
+Ce bandeau est **injecte par Odoo Apps** (pas par votre `index.html`). Il apparait
+automatiquement quand un utilisateur connecte a **telecharge** le module (meme gratuit).
+
+**Ce n'est pas supprimable via le code du module.** Pour les visiteurs non connectes,
+il n'apparaît generalement pas.
+
+Verifiez aussi sur le portail developpeur :
+- **Prix = 0 EUR** (module gratuit)
+- Aucune cle `price` / `currency` dans le manifest
+
+## Encodage des caracteres
+
+Utiliser des **entites HTML** dans `index.html` (`&eacute;`, `&agrave;`, `&rarr;`, etc.)
+Les caracteres Unicode bruts (`→`, `—`, `«`) s'affichent mal sur Apps Odoo.
+
 ## Support
 
 Contacter **AKREM KHELIFI** :
