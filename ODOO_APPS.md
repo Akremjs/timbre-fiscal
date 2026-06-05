@@ -35,8 +35,9 @@ Le ZIP doit contenir **un seul dossier** `timbre_fiscal_tn/` à la racine.
    - **Catégorie** : Accounting / Localizations
    - **Licence** : LGPL-3
    - **Prix** : Gratuit
-   - **Repository GitHub** : `https://github.com/Akremjs/timbre-fiscal`
-   - Branche : `main` (dossier `timbre_fiscal_tn/`)
+   - **Repository GitHub (format Odoo Apps)** :
+     `ssh://git@github.com/Akremjs/timbre-fiscal.git#17.0`
+   - Branche : `17.0` (dossier `timbre_fiscal_tn/`)
 4. Uploadez le ZIP ou liez le dépôt GitHub
 5. Ajoutez captures d'écran facture avec ligne « Timbre Fiscal »
 

@@ -1,7 +1,10 @@
 <section class="oe_container">
   <div class="oe_row oe_spaced">
     <h2 class="oe_slogan">Droit de Timbre Fiscal (Tunisie)</h2>
-    <h3 class="oe_slogan">Facturation conforme à la réglementation tunisienne</h3>
+    <h3 class="oe_slogan">Automatisez le timbre fiscal sur vos factures clients Odoo 17</h3>
+    <p class="oe_mt32 text-center">
+      Conforme à la réglementation tunisienne — installation en un clic, sans saisie manuelle.
+    </p>
   </div>
   <div class="oe_row oe_spaced">
     <div class="oe_span12 oe_picture">
@@ -12,40 +15,140 @@
 
 <section class="oe_container oe_dark">
   <div class="oe_row oe_spaced">
-    <h3>Fonctionnalités</h3>
-    <ul>
-      <li>Ajout automatique du timbre fiscal sur les factures clients</li>
-      <li>Montant configurable (par défaut 1,000 DT)</li>
-      <li>Libellé propre « Timbre Fiscal » sur la facture</li>
-      <li>TVA exclue sur la ligne timbre</li>
-      <li>Compatible Odoo 17 et localisation Tunisie</li>
-    </ul>
+    <h3>Le problème que ce module résout</h3>
+    <p>
+      En Tunisie, les factures clients doivent inclure le <strong>droit de timbre fiscal</strong>
+      (généralement <strong>1,000 DT</strong>). Sans automatisation, chaque facture exige une ligne
+      saisie à la main — source d'oublis, d'erreurs de montant et d'écarts comptables.
+    </p>
+    <p>
+      Ce module ajoute automatiquement la ligne <strong>« Timbre Fiscal »</strong> sur chaque
+      facture client en brouillon, avec le bon montant et <strong>sans TVA</strong>, directement
+      intégrée au total de la facture.
+    </p>
+  </div>
+</section>
+
+<section class="oe_container">
+  <div class="oe_row oe_spaced">
+    <h3>Aperçu sur facture</h3>
+    <p>Exemple réel : la ligne timbre apparaît proprement sous les articles, avant le total.</p>
+    <div class="oe_span12 oe_picture">
+      <img class="oe_picture oe_screenshot" src="screenshot_invoice.png" alt="Facture avec ligne Timbre fiscal"/>
+    </div>
+  </div>
+</section>
+
+<section class="oe_container oe_dark">
+  <div class="oe_row oe_spaced">
+    <h3>Fonctionnement</h3>
+    <div class="oe_span6">
+      <h4>Automatique</h4>
+      <ul>
+        <li>À la création ou modification d'une <strong>facture client</strong> en brouillon, le module ajoute la ligne timbre.</li>
+        <li>Libellé clair sur le PDF : <strong>« Timbre Fiscal »</strong> (sans code article visible).</li>
+        <li>Quantité fixe : <strong>1</strong> — montant par défaut : <strong>1,000 DT</strong>.</li>
+        <li>La ligne est <strong>exclue de la TVA</strong>.</li>
+      </ul>
+    </div>
+    <div class="oe_span6">
+      <h4>Intelligent</h4>
+      <ul>
+        <li>Ne duplique pas la ligne si elle existe déjà.</li>
+        <li>Met à jour le montant si vous changez le paramètre système.</li>
+        <li>Retire la ligne si le timbre est désactivé sur la facture.</li>
+        <li>Par défaut, <strong>pas de timbre</strong> sur les factures fournisseur.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section class="oe_container">
   <div class="oe_row oe_spaced">
     <h3>Installation</h3>
-    <p>Aucune configuration complexe : installez le module, créez une facture client et la ligne timbre est ajoutée automatiquement.</p>
+    <ol>
+      <li>Installez le module depuis Apps (ou copiez le dossier dans vos addons).</li>
+      <li>Mettez à jour la liste des applications.</li>
+      <li>Cliquez sur <strong>Installer</strong> — aucune configuration obligatoire.</li>
+      <li>Créez une facture client : la ligne timbre est ajoutée automatiquement.</li>
+    </ol>
+    <p>
+      <strong>C'est tout.</strong> Le produit « Timbre Fiscal » et les paramètres par défaut
+      sont créés à l'installation.
+    </p>
   </div>
 </section>
 
 <section class="oe_container oe_dark">
   <div class="oe_row oe_spaced">
-    <h3>Configuration avancée</h3>
-    <p>Paramètres système (mode développeur) :</p>
-    <ul>
-      <li><code>timbre_fiscal_tn.amount</code> — montant du timbre</li>
-      <li><code>timbre_fiscal_tn.on_customer_invoice</code> — factures clients</li>
-      <li><code>timbre_fiscal_tn.on_vendor_bill</code> — factures fournisseur</li>
-    </ul>
+    <h3>Configuration (optionnelle)</h3>
+    <p>Mode développeur → Paramètres → Paramètres techniques → Paramètres système :</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Clé</th>
+          <th>Description</th>
+          <th>Défaut</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>timbre_fiscal_tn.amount</code></td>
+          <td>Montant du timbre en dinars</td>
+          <td>1.0</td>
+        </tr>
+        <tr>
+          <td><code>timbre_fiscal_tn.on_customer_invoice</code></td>
+          <td>Activer sur les factures clients</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td><code>timbre_fiscal_tn.on_vendor_bill</code></td>
+          <td>Activer sur les factures fournisseur</td>
+          <td>False</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Sur chaque facture, le champ <strong>« Appliquer le timbre fiscal »</strong> permet
+      d'activer ou de désactiver le timbre au cas par cas.
+    </p>
   </div>
 </section>
 
 <section class="oe_container">
   <div class="oe_row oe_spaced">
-    <h3>Support</h3>
+    <h3>Compatibilité</h3>
+    <ul>
+      <li><strong>Odoo 17.0</strong> — Comptabilité</li>
+      <li>Compatible avec la localisation tunisienne (<code>l10n_tn</code>)</li>
+      <li>Dépendances : <code>account</code>, <code>product</code></li>
+      <li>Licence : <strong>LGPL-3</strong> — module gratuit</li>
+    </ul>
+  </div>
+</section>
+
+<section class="oe_container oe_dark">
+  <div class="oe_row oe_spaced">
+    <h3>Besoin d'aide ?</h3>
+    <p>
+      Installation, personnalisation ou support pour votre entreprise en Tunisie —
+      contactez directement le développeur :
+    </p>
+    <ul>
+      <li>
+        <strong>Email :</strong>
+        <a href="mailto:akremkhelifi07@gmail.com">akremkhelifi07@gmail.com</a>
+      </li>
+      <li>
+        <strong>WhatsApp :</strong>
+        <a href="https://wa.me/21654444373" target="_blank">+216 54 444 373</a>
+      </li>
+      <li>
+        <strong>GitHub :</strong>
+        <a href="https://github.com/Akremjs/timbre-fiscal" target="_blank">github.com/Akremjs/timbre-fiscal</a>
+      </li>
+    </ul>
     <p>Auteur : <strong>AKREM KHELIFI</strong></p>
-    <p>GitHub : <a href="https://github.com/Akremjs/timbre-fiscal">github.com/Akremjs/timbre-fiscal</a></p>
   </div>
 </section>
