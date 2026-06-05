@@ -76,7 +76,7 @@ En Tunisie, les factures clients doivent inclure le **droit de timbre fiscal**. 
 
 ## Support & contact
 
-**AKREM KHELIFI**
+**AKREM.KHELIFI**
 
 - Email : [akremkhelifi07@gmail.com](mailto:akremkhelifi07@gmail.com)
 - WhatsApp : [+216 54 444 373](https://wa.me/21654444373)
@@ -103,5 +103,5 @@ En Tunisie, les factures clients doivent inclure le **droit de timbre fiscal**. 
 | Repository | https://github.com/Akremjs/timbre-fiscal |
 | Branche | main |
 | Dossier module | timbre_fiscal_tn/ |
-| Auteur | AKREM KHELIFI |
+| Auteur | AKREM.KHELIFI |
 | Site web / support | mailto:akremkhelifi07@gmail.com |

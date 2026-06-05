@@ -94,6 +94,6 @@ Les caracteres Unicode bruts (`→`, `—`, `«`) s'affichent mal sur Apps Odoo.
 
 ## Support
 
-Contacter **AKREM KHELIFI** :
+Contacter **AKREM.KHELIFI** :
 - Email : akremkhelifi07@gmail.com
 - WhatsApp : +216 54 444 373

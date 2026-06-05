@@ -3,7 +3,7 @@
 Module Odoo **17.0** : **Droit de Timbre Fiscal (Tunisie)**
 
 Nom technique : `timbre_fiscal_tn`  
-Auteur : **AKREM KHELIFI**
+Auteur : **AKREM.KHELIFI**
 
 ## Structure du dépôt (Odoo Apps)
 

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Droit de Timbre Fiscal (Tunisie)',
-    'version': '17.0.1.0.2',
+    'version': '17.0.1.0.3',
     'category': 'Accounting/Localizations',
     'summary': 'Ajout automatique du droit de timbre fiscal sur les factures clients tunisiennes',
     'description': """
@@ -26,12 +26,12 @@ Configuration (optionnelle)
 * timbre_fiscal_tn.on_customer_invoice
 * timbre_fiscal_tn.on_vendor_bill
 
-Support - AKREM KHELIFI
+Support - AKREM.KHELIFI
 -----------------------
 Email : akremkhelifi07@gmail.com
 WhatsApp : +216 54 444 373
     """,
-    'author': 'AKREM KHELIFI',
+    'author': 'AKREM.KHELIFI',
     'license': 'LGPL-3',
     'depends': ['account', 'product'],
     'data': [
