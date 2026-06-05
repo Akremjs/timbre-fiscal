@@ -1,0 +1,53 @@
+# Publier sur Odoo Apps Store
+
+## Prérequis
+
+1. Compte développeur Odoo : https://www.odoo.com/fr_FR/partners
+2. Dépôt GitHub public : https://github.com/Akremjs/timbre-fiscal
+3. Module testé sur Odoo **17.0**
+
+## Contenu requis (déjà inclus)
+
+| Élément | Fichier |
+|---------|---------|
+| Manifest | `timbre_fiscal_tn/__manifest__.py` |
+| Icône 256×256 | `timbre_fiscal_tn/static/description/icon.png` |
+| Bannière | `timbre_fiscal_tn/static/description/banner.png` |
+| Description HTML | `timbre_fiscal_tn/static/description/index.html` |
+| Licence | `LICENSE` (LGPL-3) |
+
+## Créer le fichier ZIP pour soumission
+
+```bash
+cd timbre-fiscal
+zip -r timbre_fiscal_tn.zip timbre_fiscal_tn/ -x "*.git*"
+```
+
+Le ZIP doit contenir **un seul dossier** `timbre_fiscal_tn/` à la racine.
+
+## Étapes sur Odoo Apps
+
+1. Connectez-vous sur https://apps.odoo.com
+2. **Soumettre un module** / Developer portal
+3. Renseignez :
+   - **Nom technique** : `timbre_fiscal_tn`
+   - **Version Odoo** : 17.0
+   - **Catégorie** : Accounting / Localizations
+   - **Licence** : LGPL-3
+   - **Prix** : Gratuit
+   - **Repository GitHub** : `https://github.com/Akremjs/timbre-fiscal`
+   - Branche : `main` (dossier `timbre_fiscal_tn/`)
+4. Uploadez le ZIP ou liez le dépôt GitHub
+5. Ajoutez captures d'écran facture avec ligne « Timbre Fiscal »
+
+## Checklist avant publication
+
+- [ ] Facture client test : ligne Timbre Fiscal 1,00 DT sans TVA
+- [ ] Facture fournisseur : pas de timbre (par défaut)
+- [ ] Module installable sans erreur sur Odoo 17 propre
+- [ ] `icon.png` et `index.html` s'affichent correctement dans Apps
+- [ ] Aucune URL ou auteur tiers (polyline.xyz, etc.)
+
+## Support
+
+Contacter **AKREM KHELIFI** via GitHub Issues sur le dépôt.
