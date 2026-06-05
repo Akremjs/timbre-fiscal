@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Droit de Timbre Fiscal (Tunisie)',
-    'version': '17.0.1.0.3',
+    'version': '17.0.1.0.4',
     'category': 'Accounting/Localizations',
     'summary': 'Ajout automatique du droit de timbre fiscal sur les factures clients tunisiennes',
     'description': """

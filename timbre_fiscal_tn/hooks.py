@@ -18,6 +18,40 @@ LEGACY_MODULE_NAMES = (
 )
 
 
+def _apply_timbre_fiscal_column_exists(env):
+    env.cr.execute(
+        """
+        SELECT 1
+          FROM information_schema.columns
+         WHERE table_name = 'account_move'
+           AND column_name = 'apply_timbre_fiscal'
+        """,
+    )
+    return bool(env.cr.fetchone())
+
+
+def _ensure_account_move_schema(env):
+    """Corrige une installation partielle (produit cree, code Python inactif)."""
+    if _apply_timbre_fiscal_column_exists(env):
+        return True
+    _logger.warning(
+        'timbre_fiscal_tn: schema incomplet detecte, initialisation de account.move',
+    )
+    try:
+        env['account.move']._auto_init()
+    except Exception as err:
+        _logger.error('timbre_fiscal_tn: echec _auto_init account.move : %s', err)
+        return False
+    if _apply_timbre_fiscal_column_exists(env):
+        _logger.info('timbre_fiscal_tn: schema account.move corrige avec succes')
+        return True
+    _logger.error(
+        'timbre_fiscal_tn: schema toujours incomplet. '
+        'Executez : odoo -u timbre_fiscal_tn -d VOTRE_BASE',
+    )
+    return False
+
+
 def post_init_hook(env):
     icp = env['ir.config_parameter'].sudo()
     for old_key, new_key in LEGACY_PARAM_KEYS.items():
@@ -56,3 +90,5 @@ def post_init_hook(env):
             _logger.info('Ancien module %s désinstallé', legacy_name)
         except Exception as err:
             _logger.warning('Désinstallation %s ignorée : %s', legacy_name, err)
+
+    _ensure_account_move_schema(env)
