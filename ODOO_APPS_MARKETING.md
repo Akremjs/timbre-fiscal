@@ -80,7 +80,6 @@ En Tunisie, les factures clients doivent inclure le **droit de timbre fiscal**. 
 
 - Email : [akremkhelifi07@gmail.com](mailto:akremkhelifi07@gmail.com)
 - WhatsApp : [+216 54 444 373](https://wa.me/21654444373)
-- GitHub : https://github.com/Akremjs/timbre-fiscal
 
 > Si vous cherchez de l'aide pour l'installation, la personnalisation ou l'intégration dans votre ERP tunisien, contactez-moi par email ou WhatsApp.
 

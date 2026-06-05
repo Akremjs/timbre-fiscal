@@ -25,6 +25,32 @@ zip -r timbre_fiscal_tn.zip timbre_fiscal_tn/ -x "*.git*"
 
 Le ZIP doit contenir **un seul dossier** `timbre_fiscal_tn/` à la racine.
 
+## Repository Git (format Odoo Apps)
+
+```
+ssh://git@github.com/Akremjs/timbre-fiscal.git#17.0
+```
+
+### Erreur « Dépôt introuvable » (code 128) ?
+
+Odoo Apps ne peut lire un dépôt **privé** sans autorisation explicite.
+
+**Option A — Rendre le dépôt public (recommandé pour un module gratuit)**
+
+1. GitHub → https://github.com/Akremjs/timbre-fiscal/settings
+2. **Danger Zone** → **Change repository visibility** → **Public**
+3. Réessayez la mise à jour sur Odoo Apps
+
+**Option B — Garder le dépôt privé**
+
+1. GitHub → https://github.com/Akremjs/timbre-fiscal/settings/access
+2. **Collaborators** → **Add people**
+3. Ajoutez l'utilisateur GitHub **`online-odoo`** (pas `odoo-online`)
+4. Accès : **Read** suffit
+5. Réessayez avec la même URL SSH
+
+> Source : [FAQ Odoo Apps — repository privé](https://apps.odoo.com/apps/faq)
+
 ## Étapes sur Odoo Apps
 
 1. Connectez-vous sur https://apps.odoo.com
@@ -51,4 +77,6 @@ Le ZIP doit contenir **un seul dossier** `timbre_fiscal_tn/` à la racine.
 
 ## Support
 
-Contacter **AKREM KHELIFI** via GitHub Issues sur le dépôt.
+Contacter **AKREM KHELIFI** :
+- Email : akremkhelifi07@gmail.com
+- WhatsApp : +216 54 444 373
